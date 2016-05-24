@@ -46,16 +46,42 @@ This theme includes the following:
 
 ## Screenshots
 
+**Home page: Mobile version**
+
 ![Image 1](http://dchantzis.github.io/jekyll-kitsune/assets/img/screenshots/screenshot-1.png)
+
+---
+
+**Home page with expanded navigation: Tablet version**
 
 ![Image 2](http://dchantzis.github.io/jekyll-kitsune/assets/img/screenshots/screenshot-2.png)
 
+---
+
+**Album page: Fullscreen**
+
 ![Image 3](http://dchantzis.github.io/jekyll-kitsune/assets/img/screenshots/screenshot-3.png)
+
+---
+
+**Album page: Image lightbox**
 
 ![Image 4](http://dchantzis.github.io/jekyll-kitsune/assets/img/screenshots/screenshot-4.png)
 
+---
+
+**Contact page**
+
 ![Image 5](http://dchantzis.github.io/jekyll-kitsune/assets/img/screenshots/screenshot-5.png)
 
+---
+
+**Predictive search**
+
 ![Image 6](http://dchantzis.github.io/jekyll-kitsune/assets/img/screenshots/screenshot-6.png)
+
+---
+
+**Search results page**
 
 ![Image 7](http://dchantzis.github.io/jekyll-kitsune/assets/img/screenshots/screenshot-7.png)
