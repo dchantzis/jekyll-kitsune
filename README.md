@@ -1,5 +1,7 @@
 # README
 
+## **"Kitsune"** | Responsive Multi-Purpose Jekyll Creative Theme
+
 ### Jekyll theme specifically created for portfolio websites, utilizing Jekyll collections for albums and images.
 **Built: Early 2016**
 
