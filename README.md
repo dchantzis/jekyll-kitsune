@@ -1,6 +1,6 @@
 # README
 
-### Jekyll theme specifically created for portfolio websites, utilizing Jekyll collections for image albums and images.
+### Jekyll theme specifically created for portfolio websites, utilizing Jekyll collections for albums and images.
 **Built: Early 2016**
 
 **Demo Website URL:** [dchantzis.github.io/jekyll-kitsune/](http://dchantzis.github.io/jekyll-kitsune/)
