@@ -16,15 +16,18 @@ This theme includes the following:
 - Posts pagination
 - Album pagination
 - Related posts
-- Integrating Google analytics and Google maps
+- Contact form using [formspree.io/](https://formspree.io/)
+- Integrating Google analytics and themed Google maps
 - Google fonts (Roboto and Abel)
 - Syntax highlighting
-- Pure CSS toggleable navigation
-- Lightbox presentation for image albums
+- Pure CSS toggleable navigation and information top-bar
+- Lightbox presentation for image albums with transitions, controls and navigation buttons
+- CSS3 & jQuery responsive image carousel with transitions, controls and navigation buttons
 - Option to select the image grid type of an album
 - Social media share buttons for posts, albums and images
 - Disqus comments
 - Separate sitemap page
+- Word counter and "reading time" functionality for posts
 - JSON & AJAX driven predictive search functionality with search results page for albums, pages, images and posts
 
 ### Technologies and tools used:
