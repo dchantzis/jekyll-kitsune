@@ -1,0 +1,24 @@
+  <meta name="description" content="{% if page.meta %}{{page.meta}}{% else %}{{site.description}}{% endif %}">
+  <meta name="author" content="{% if false == page.author %}{{site.author}}{% else %}{{page.author}}{% endif %}">
+  <meta name="keywords" content="{% for keyword in site.data.meta-keywords %}{{keyword}}{% if false == forloop.last %}, {% endif %}{% endfor %}">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{% if page.titleBefore %}{{page.titleBefore}} · {% endif %}{% if page.title %}{{page.title | capitalize}} · {% endif %}{{site.title}}{% if page.titleAfter %} · {{page.titleAfter}}{% endif %}">
+  <meta property="og:image" content="{{site.baseurl}}{{ page.image }}">
+  <meta property="og:description" content="{% if page.meta %}{{ page.meta }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url" content="{{site.baseurl}}{{page.url}}">
+  <meta property="og:site_name" content="{{site.title}}">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if page.titleBefore %}{{page.titleBefore}} · {% endif %}{% if page.title %}{{page.title | capitalize}} · {% endif %}{{site.title}}{% if page.titleAfter %} · {{page.titleAfter}}{% endif %}">
+  <meta name="twitter:url" content="{{site.baseurl}}{{page.url}}">
+  <meta name="twitter:description" content="{% if page.meta %}{{page.meta}}{% else %}{{site.description}}{% endif %}">
+  <meta name="twitter:image" content="{{site.baseurl}}twitter-120x120-image.jpg">
+
+  {% for social in site.social %}
+    {% assign social.provider == social.provider | downcase %}
+    {% if "twitter" == social.provider %}
+      <meta name="twitter:site" content="@{{social.account-id}}">
+      <meta name="twitter:creator" content="@{{social.account-id}}">
+    {% endif %}
+  {% endfor %}

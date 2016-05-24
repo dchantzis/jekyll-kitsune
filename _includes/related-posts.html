@@ -1,0 +1,15 @@
+{% if site.related_posts.size >= 1 %}
+<div class="related-posts">
+  <h3 class="push-0 kilo brand-highlight push-1-4">Related news</h3>
+  <ul class="list-group push-0">
+  {% for related_post in site.related_posts %}
+    <li class="list-group__item push-1-2">
+      <a href="{{ related_post.url }}">
+        <span class="related-post-date micro">{{ related_post.date | date: "%B %d, %Y" }}</span>
+        <h4 class="related-post-title push-0 micro brand-highlight">{{ related_post.title | capitalize }}</h4>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+{% endif %}

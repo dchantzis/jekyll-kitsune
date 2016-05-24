@@ -1,0 +1,36 @@
+<div class="dropdown-content text-center push-0">
+
+  <input type="checkbox" class="mobile-info-toggle-box" name="mobile-info-toggle" id="mobileInfoToggle">
+  <div class="info-container">
+
+    <div class="icon-link btn-close btn-close-info island-1-2">
+      <i class="icon i-16 i-close"></i>
+      <span class="icon-label hidden">close</span>
+    </div>
+
+    <div class="dropdown-info gutter">
+      <div class="grid grid-middle">
+        <div class="unit [ xs-1-3 s-1-4 ]">
+          <div class="avatar">
+            <img class="img-flex" src="{{site.baseurl}}/assets/img/avatar.png" alt="Profile picture">
+          </div>
+        </div>
+        <div class="unit [ xs-1-3 s-3-4 ]">
+          <p class="push-0"><span>{{ site.author }}</span> | Description line 1</p>
+          <p class="push-0 pad-t-1-4 tagline"><em>Description line 2</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="checkbox" class="mobile-nav-toggle-box" name="mobile-nav-toggle" id="mobileNavToggle">
+  <div class="xs-s-m-nav nav-container">
+    <div class="icon-link btn-close btn-close-nav island-1-2">
+      <i class="icon i-16 i-close"></i>
+      <span class="icon-label hidden">close</span>
+    </div>
+    <div class="dropdown-nav gutter">
+      {% include navigation.html navSection = "first" navType="xs-s-m" %}
+      {% include navigation.html navSection = "second" navType="xs-s-m" %}
+    </div>
+  </div>
+</div>

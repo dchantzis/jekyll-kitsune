@@ -1,0 +1,29 @@
+<div class="contact-info push-1-2 milli" itemscope itemtype="http://schema.org/Person">
+  <h6 class="brand-highlight push-0" itemprop="name">{{ site.contact-info.name }}</h6>
+  <span itemprop="jobTitle">{{ site.contact-info.job-title }}</span>
+  <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    {% if site.contact-info.address.street %}
+      <span itemprop="streetAddress">{{site.contact-info.address.street}}</span>,
+    {% endif %}
+    {% if site.contact-info.address.locality %}
+      <span itemprop="addressLocality">{{site.contact-info.address.locality}}</span>,
+    {% endif %}
+    {% if site.contact-info.address.region %}
+      <span itemprop="addressRegion">{{site.contact-info.address.region}}</span>,
+    {% endif %}
+    {% if site.contact-info.address.country %}
+      <span itemprop="addressCountry">{{site.contact-info.address.country}}</span>
+    {% endif %}
+    {% if site.contact-info.address.postal-code %}
+      <span itemprop="postalCode">{{site.contact-info.address.postal-code}}</span>
+    {% endif %}
+  </p>
+  <dl class="list-group clearfix">
+    <dt class="">E-mail:</dt>
+    <dd><a href="mailto:{{site.contact-info.e-mail}}" itemprop="email">{{site.contact-info.e-mail}}</a></dd>
+    <dt class="">Tel:</dt>
+    <dd><a href="tel:{{site.contact-info.phone}}" itemprop="telephone">{{site.contact-info.phone}}</a></dd>
+    <dt class="">Website:</dt>
+    <dd><a href="{{site.contact-info.website-url}}" itemprop="url">{{site.contact-info.website-url}}</a></dd>
+  </dl>
+</div>

@@ -1,0 +1,36 @@
+---
+layout: null
+sitemap:
+  include: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% assign posts = site.posts | sort:"sitemap.priority" %}
+  {% for item in posts %}
+    {% if item.sitemap.include == false %}{% continue %}{% endif %}
+    {% unless item.published == false %}
+      {% include sitemap-entry.xml entry=item %}
+    {% endunless %}
+  {% endfor %}
+
+  {% assign pages = site.pages | sort:"sitemap.priority" %}
+  {% for item in pages %}
+    {% if item.layout %}
+      {% if item.sitemap.include == false %}{% continue %}{% endif %}
+      {% if '/' == item.url or item.url contains "page2" %}{% continue %}{% endif %}
+      {% include sitemap-entry.xml entry=item %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign albums = site.albums | sort:"order" %}
+  {% for item in albums %}
+    {% if item.sitemap.include == false %}{% continue %}{% endif %}
+    {% include sitemap-entry.xml entry=item %}
+  {% endfor %}
+
+  {% assign image = site.images | sort:"order" %}
+  {% for item in image %}
+    {% if item.sitemap.include == false %}{% continue %}{% endif %}
+    {% include sitemap-entry.xml entry=item %}
+  {% endfor %}
+</urlset>

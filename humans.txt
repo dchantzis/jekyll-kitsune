@@ -1,0 +1,12 @@
+/* TEAM */
+
+	Dimitrios Chantzis
+	Contact: chantzis.dimitrios@gmail.com
+	Website: www.dimitrioschantzis.com
+
+/* SITE */
+	Last update:2016
+	Language: English
+	Doctype:HTML5
+	IDE: Sublime Text
+

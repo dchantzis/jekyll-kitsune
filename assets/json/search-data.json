@@ -1,0 +1,40 @@
+---
+layout: null
+---
+{% assign pages = "" | split:"|" %}
+{% for item in site.pages %}
+  {% if item.title == nil %}{% continue %}{% endif %}
+  {% if '/' == item.url or item.url contains "page2" or item.url contains "news" or item.sitemap.include == false %}{% continue %}{% endif %}
+  {% assign pages = pages | push: item %}
+{% endfor %}
+{% for item in site.albums %}
+  {% assign pages = pages | push: item %}
+{% endfor %}
+{% for item in site.images %}
+  {% assign pages = pages | push: item %}
+{% endfor %}
+[
+    {% for post in site.posts %}
+      {
+        "title": "{{ post.title | escape }}",
+        "category": "{{ post.category }}",
+        "tags": "{{ post.tags | join: ', ' }}",
+        "url":  "{{ site.baseurl }}{{ post.url }}",
+        "date": "{{ post.date }}",
+        "summary": "{{ post.summary | strip_html | strip_newlines }}",
+        "content": "{{ post.content | strip_html | strip_newlines }}",
+        "type": "post"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %},
+  {% for page in pages %}
+    {
+        "title": "{{ page.title | escape }}",
+        "url": "{{ site.baseurl }}{{ page.url }}",
+        "date": "{{ page.date }}",
+        "summary": "{{ page.summary | strip_html | strip_newlines }}",
+        "content": "{{ page.content | strip_html | strip_newlines }}",
+        "type": "page"
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+

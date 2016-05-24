@@ -1,0 +1,170 @@
+.mobile-info-toggle-box,
+.mobile-nav-toggle-box {
+  position: absolute;
+  top: -10em;
+}
+
+.mobile-info-toggle-label,
+.mobile-nav-toggle-label {
+  cursor: pointer;
+  display: block;
+}
+
+.mobile-info-toggle-box:checked ~ .info-container {
+  max-height: 17rem;
+}
+
+.mobile-nav-toggle-box:checked ~ .nav-container {
+  max-height: 24.5rem;
+}
+
+.nav-container,
+.info-container {
+  max-height: 0;
+  overflow: hidden;
+
+  position: relative;
+
+  -webkit-transition:
+    max-height 400ms ease-in-out;
+  transition:
+    max-height 400ms ease-in-out;
+}
+
+.nav-container li {
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.nav-container li:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-container li:hover a {
+  color: rgba(255, 255, 255, 1);
+}
+
+.nav-container div {
+  opacity: 0.8;
+}
+
+.dropdown-content {
+  background-color: #ccc;
+}
+
+.dropdown-info {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  width: 25rem;
+  margin: 0 auto;
+}
+
+.dropdown-nav {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  width: 14rem;
+  margin: 0 auto;
+}
+
+.l-xl-nav li {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.l-xl-nav li:hover {
+  padding-left: 0.7rem;
+}
+
+a,
+a:link,
+a:visited {
+  color: rgba(68, 68, 68, 0.7);
+  text-decoration: none;
+}
+
+.nav-container li:hover a:hover,
+.nav-container li:hover a:active,
+.nav-container li:hover a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.l-xl-nav li:hover a,
+.l-xl-nav li:hover a:hover,
+.l-xl-nav li:hover a:active,
+.l-xl-nav li:hover a:focus {
+  color: rgba(68, 68, 68, 1);
+}
+
+.social-links a,
+.social-links a:link,
+.social-links a:visited {
+  color: #000;
+  border-bottom: 0;
+}
+
+p a,
+p a:link,
+p a:visited {
+  border-bottom: 1px solid rgba(68, 68, 68, 1);
+}
+
+.nav a:hover,
+.nav a:active,
+.nav a:focus,
+.pagination a:hover,
+.pagination a:active,
+.pagination a:focus,
+.related-posts a:hover,
+.related-posts a:active,
+.related-posts a:focus {
+  border-bottom: 1px solid rgba(68, 68, 68, 0.7);
+}
+
+.nav-gutter-custom {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+
+.xs-s-m-nav .list-group li {
+  padding-bottom: 0.1rem;
+}
+
+.l-xl-nav .list-group li {
+  position: relative;
+}
+.l-xl-nav .current a::before {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: -15px;
+  font-weight: 400;
+  font-size: 14px;
+  content: "×";
+}
+
+@media only screen and (min-width: 38em) {
+
+  .dropdown-info {
+    width: 30rem;
+  }
+
+  .dropdown-nav {
+    width: 14rem;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  li.btn-nav {
+    display: none;
+  }
+
+  .dropdown-info {
+    width: 35rem;
+  }
+
+}

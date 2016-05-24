@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+{% assign image = page %}
+
+<section class="{{page.sectionClass}} pad-b-2">
+
+  <div class="grid">
+    <div class="unit [ xs-1 s-1 l-1 ] ">
+      <h1 class="page-title brand-highlight push-1-2 peta">{{ page.title | capitalize }}</h1>
+      <div class="page-info push-0 milli p-container">{{ content | markdownify }}</div>
+    </div>
+  </div>
+
+  <div class="pad-t pad-b-1-4">
+    <div class="grid">
+      <div class="unit [ xs-1 l-1 ] ">
+        {% include image.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="pad-b">
+    <div class="grid">
+      <div class="unit [ xs-1 s-1 l-1 ]">
+        <div class="social-share-buttons text-center">
+          {% include social-share-buttons.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="island-2">
+    <div class="grid">
+      <div class="unit [ xs-1 s-1 l-1 ]">
+        <hr class="hr pad-b-1-4">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{% include albums.html album-category = 'all' %}

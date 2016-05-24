@@ -1,0 +1,17 @@
+{% if content and page.related %}
+<div class="related-posts">
+  <h3 class="push-0 kilo brand-highlight push-1-4">Related news</h3>
+  <ul class="list-group push-0">
+    {% for post in site.posts %}
+      {% if page.related contains post.title %}
+        <li class="list-group__item push-1-2">
+          <a href="{{ related_post.url }}">
+            <div class="related-post-date micro">{{ post.date | date: "%B %d, %Y" }}</div>
+            <h4 class="related-post-title push-0 micro brand-highlight">{{ post.title | capitalize }}</h4>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

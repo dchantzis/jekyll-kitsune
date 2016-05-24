@@ -1,0 +1,61 @@
+markdown: kramdown
+baseurl: /jekyll-kitsune
+url: http://dchantzis.github.io/jekyll-kitsune
+title: John Smith
+description: Website description
+author: John Smith
+e-mail: your.email@email.you
+exclude: ['README.md', '.gitignore']
+permalink: pretty
+social:
+  - provider: facebook
+    account-id:
+  - provider: instagram
+    account-id:
+  - provider: twitter
+    account-id:
+  - provider: pinterest
+    account-id:
+include-analytics-tracking: false
+google-api-key:
+analytics :
+  provider : google
+  google :
+    tracking_id : ''
+google-maps:
+  latitude: 50.8373993
+  longitude: -0.1764011
+  zoom: 8
+collections:
+  albums:
+    output: true
+    permalink: /album/:path/
+  images:
+    output: true
+    permalink: /image/:path/
+gems: [
+    jekyll-paginate,
+    jekyll/tagging,
+    jekyll-tagging-related_posts
+  ]
+disqus:
+  comments: true
+  url: demodchantzis.disqus.com
+instagram-feed: false
+display-social-media-share-buttons: true
+paginate: 5
+paginate_path: "/news/page:num/"
+contact-info:
+  name: Name
+  job-title: Job title
+  e-mail: your.email@email.you
+  phone: +44 (0) 040021130
+  website-url: http://www.website.com
+  address:
+      street: Street
+      locality: City
+      region: Region
+      country: Country
+      postal-code: Postal Code
+enableSiteSearch: true
+enablePostsTimeToRead: true

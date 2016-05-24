@@ -1,0 +1,89 @@
+<header class="masthead push-0 island zindex-2">
+
+  <div class="header-btn gutter-1-2 push-0">
+    <ul class="list-group--inline">
+      <li class="icon-link btn-info">
+        <label for="mobileInfoToggle" class="mobile-info-toggle-label">
+          <i class="icon i-32 i-info"></i>
+          <span class="icon-label hidden">info</span>
+        </label>
+      </li>
+      <li class="icon-link btn-nav">
+        <label for="mobileNavToggle" class="mobile-nav-toggle-label">
+          <i class="icon i-32 i-nav"></i>
+          <span class="icon-label hidden">menu</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div class="header-content pad-t-2">
+    <div class="grid grid-middle">
+      <div class="unit [ xs-1 l-1-6 ] ">
+        <div class="logo-wrapper">
+        {% if '/' == page.url %}
+          <a href="{{site.baseurl}}/">
+            <h1 class="masthead logo text-center text-upper ir push-0">{{ site.title }}</h1>
+          </a>
+        {% else %}
+          <a href="{{site.baseurl}}/">
+            <h2 class="masthead logo text-center text-upper ir push-0">{{ site.title }}</h2>
+          </a>
+        {% endif %}
+        </div>
+      </div>
+
+      <div class="unit [ xs-1 l-1-2 ] pad-t-1-4 pad-b-1-2 gutter">
+        <ul class="list-group--inline push-0 social-links">
+          {% for social in site.social %}
+            {% assign social.provider == social.provider | downcase %}
+            <li class="list-group__item mega">
+              {% case social.provider %}
+                {% when 'facebook' %}
+                   <a class="icon-link" href="https://www.facebook.com/{{social.account-id}}" target="_blank" rel="external">
+                    <i class="icon i-18 i-facebook-simple"></i>
+                    <span class="icon-label hidden">facebook</span>
+                   </a>
+                {% when 'instagram' %}
+                   <a class="icon-link" href="https://www.instagram.com/{{social.account-id}}" target="_blank" rel="external">
+                    <i class="icon i-18 i-instagram"></i>
+                    <span class="icon-label hidden">instagram</span>
+                  </a>
+                {% when 'twitter' %}
+                   <a class="icon-link" href="https://twitter.com/{{social.account-id}}" target="_blank" rel="external">
+                    <i class="icon i-24 i-twitter"></i>
+                    <span class="icon-label hidden">twitter</span>
+                  </a>
+                {% when 'pinterest' %}
+                   <a class="icon-link" href="https://pinterest.com/{{social.account-id}}" target="_blank" rel="external">
+                    <i class="icon i-18 i-pinterest-simple"></i>
+                    <span class="icon-label hidden">pinterest</span>
+                  </a>
+              {% endcase %}
+            </li>
+          {% endfor %}
+
+          {% if site.enableSiteSearch %}
+            <li class="list-group__item search-box milli pad-t">{% include forms/search-form.html type='search-form-l-xl' %}</li>
+          {% else %}
+            <li class="list-group__item email milli pad-t"><a href="mailto:{{site.email}}" itemprop="email" class="pad-t-1-4 pad-b-1-4">{{site.contact-info.e-mail}}</a></li>
+          {% endif %}
+
+        </ul>
+
+        {% if site.enableSiteSearch %}
+          <div class="header-search kilo pad-t">{% include forms/search-form.html type='search-form-xs-s-m' %}</div>
+        {% else %}
+          <div class="header-email kilo pad-t"><a href="mailto:{{site.email}}" itemprop="email" class="pad-t-1-4 pad-b-1-4">{{site.contact-info.e-mail}}</a></div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+
+  <div class="hr-header island-2">
+    <hr class="pad-b-1-4">
+  </div>
+
+</header>
+

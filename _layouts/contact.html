@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<section class="{{page.sectionClass}} pad-b-2">
+
+  <div class="grid">
+    <div class="unit [ xs-1 s-1 l-4-5 ] ">
+      <h1 class="page-title brand-highlight push-1-2 peta">{{ page.title | strip | capitalize }}</h1>
+      <div class="page-info push-0 milli p-container">{{ content | markdownify }}</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="unit [ xs-1 s-1 l-2-5 ]">
+      <div class="push">
+      {% include forms/contact-form.html %}
+      </div>
+    </div>
+    <div class="unit [ xs-1 s-1 l-1-2 ] contact-map-container">
+      <div class="push-0 micro p-container">
+        {% include contact-info.html %}
+      </div>
+      {% include google-maps.html %}
+    </div>
+  </div>
+
+</section>

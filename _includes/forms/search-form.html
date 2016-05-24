@@ -1,0 +1,39 @@
+<div class="form-site-search-container">
+
+  <form class="form form-site-search" data-title="form-site-search" method="GET" id="{% if include.type %}{{include.type}}{% else %}search-form-xs-s-m{% endif %}" action="{{site.baseurl}}/search-results/">
+    <fieldset class="form-item form-search required">
+      <legend class="hidden">Search</legend>
+      <div class="search-term-container">
+        <label class="title milli hidden" for="term">Site search</label>
+        <input class="field-element text gutter-1-4" type="input" spellcheck="false" data-title="form-site-search--search" name="term" id="term" tabindex="0" placeholder="Search..." autocomplete="off" />
+
+        <div class="icon-link btn-close btn-search gutter-1-4">
+          <i class="icon i-18 i-search"></i>
+          <span class="icon-label hidden">search</span>
+        </div>
+
+      </div>
+    </fieldset>
+  </form>
+
+  <div class="search-results-container results-container island-1-2 hidden">
+    <div class="icon-link btn-close btn-close-search island-1-2">
+      <i class="icon i-16 i-close"></i>
+      <span class="icon-label hidden">close</span>
+    </div>
+
+    <div class="search-results-count"><em class="brand-highlight counter">0</em> results for: "<em class="brand-highlight term"></em>"</div>
+    <div class="search-results-posts island-1-4 milli">
+      <h6 class="brand-highlight push-1-4 micro">Posts</h6>
+      <ul class="list-group push-0">
+      </ul>
+    </div>
+    <div class="search-results-pages island-1-4 milli">
+      <h6 class="brand-highlight push-1-4 micro">Pages</h6>
+      <ul class="list-group push-0">
+      </ul>
+    </div>
+  </div>
+
+</div>
+

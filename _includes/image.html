@@ -1,0 +1,18 @@
+<figure class="graphic">
+  <div class="embed">
+    <img class="embed-item flex-img" src="{{ image.fullsize-src }}" alt="{{ image.description }}">
+    {% if 'album-view' == include.loadType  %}
+       <div class="graphic-overlay-container icon-link">
+        <div class="graphic-overlay">
+          <i class="icon i-32 i-add"></i>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+  <figcaption class="pad-t-1-2 micro">
+    <h3 class="push-0 micro brand-highlight">{{ image.title | strip | capitalize }} ({{ image.date-created }})</h3>
+    <p class="push-0">{{ image.materials }}</p>
+    <p class="push-0">{{ image.dimensions }}</p>
+    <div class="push-0 p-container">{{ image.description }}</div>
+  </figcaption>
+</figure>

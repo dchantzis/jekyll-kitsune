@@ -1,0 +1,19 @@
+{% if site.enablePostsTimeToRead %}
+
+  {% capture word_count %}
+    {{ page.content | strip_html | strip_newlines | number_of_words }}
+  {% endcapture %}
+
+  {% capture word_count_time %}
+    {{ word_count | divided_by: 5 }}
+  {% endcapture %}
+
+  <p class="milli push-1-4">
+    <em class="brand-highlight">{{word_count}}</em> Words in post.
+    <br />
+    Reading time:
+    ~ <em class="brand-highlight"><time itemprop="postReadingTime" time="{{ word_count_time | divided_by: 5 }}">{{ word_count_time | divided_by: 5 }}</time></em>
+    min. or so.
+  </p>
+
+{% endif %}

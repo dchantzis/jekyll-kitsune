@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<section class="{{page.sectionClass}}">
+  <div class="grid">
+
+    <div class="unit [ xs-1 l-2-3 ]">
+
+      <article itemscope itemtype="http://schema.org/BlogPosting">
+
+      {% include post-meta-tags.html %}
+
+        <h1 class="brand-highlight push-1-4 kilo">{{page.title | strip | upcase}}</h1>
+        <p class="milli push-1-2">
+          <time itemprop="datePublished" datetime="{{page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        </p>
+        {% include posts-time-to-read.html %}
+        <div class="push-0 milli p-container">{{ content | markdownify }}</div>
+        <div class="social-share-buttons">
+          {% include social-share-buttons.html %}
+        </div>
+
+        {% assign post_images = "" | split:"|" %}
+        {% for image in page.images %}
+          {% assign post_images = post_images | push: image %}
+        {% endfor %}
+
+        {% assign images = site.images | sort:"order" %}
+        {% for image in images %}
+          {% if image.posts contains page.title | downcase %}
+            {% assign post_images = post_images | push: image %}
+          {% endif %}
+        {% endfor %}
+
+        {% if post_images.size >= 1 %}
+          <div class="push-0 pad-t">
+            {% for image in post_images %}
+              {% include image.html %}
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if true == site.disqus.comments and true == page.comments %}
+          <div class="pad-t-1-2 pad-b-1-2">
+            {% include disqus-comments.html %}
+          </div>
+        {% endif %}
+
+      </article>
+      {% include pagination/post-pagination.html %}
+    </div>
+
+    <div class="unit [ xs-1 l-1-3 ]">
+      <aside class="aside-container push-0">
+        {% include related-posts.html %}
+
+        <div class="hr-container island-2">
+          <hr class="hr pad-b-1-4">
+        </div>
+
+        {% include instagram-feed.html %}
+      </aside>
+    </div>
+
+  </div>
+
+</section>
+

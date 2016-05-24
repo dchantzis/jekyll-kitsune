@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{% assign image = page %}
+
+<section class="{{page.sectionClass}} pad-b-2">
+  <div class="grid">
+
+    <div class="unit [ xs-1 s-1 ] ">
+      <h1 class="page-title brand-highlight push-1-2 peta">{{ page.title | capitalize }}</h1>
+      <div class="page-info push-0 milli p-container">{{ content }}</div>
+    </div>
+
+  </div>
+</section>

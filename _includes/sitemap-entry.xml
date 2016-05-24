@@ -1,0 +1,21 @@
+{% assign item = include.entry %}
+<url>
+  <loc>{{ site.url }}{{ item.url }}</loc>
+  {% if item.sitemap.lastMod %}
+    <lastmod>{{ item.sitemap.lastMod | date: "%Y-%m-%d" }}</lastmod>
+  {% elsif item.date %}
+    <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
+  {% else %}
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  {% endif %}
+  {% if item.sitemap.changeFreq %}
+    <changefreq>{{ item.sitemap.changeFreq }}</changefreq>
+  {% else %}
+    <changefreq>monthly</changefreq>
+  {% endif %}
+  {% if item.sitemap.priority %}
+    <priority>{{ item.sitemap.priority }}</priority>
+  {% else %}
+    <priority>0.5</priority>
+  {% endif %}
+</url>

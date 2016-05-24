@@ -1,0 +1,424 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Abel', sans-serif;
+}
+
+body {
+  color: #000000;
+}
+
+.brand {
+  color: rgba(68, 68, 68, 1);
+}
+
+.brand-highlight {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 3px;
+  font-weight: normal;
+}
+
+.nav-xs-s-main {
+  border-bottom: 1px solid rgba(199, 199, 199, 1);
+}
+.nav-xs-s-main a {
+  color: rgba(181, 181, 181, 1);
+}
+
+.nav-m-l-xl-main .list-group__item {
+  padding-right: 1rem;
+}
+
+.unit.album-cover {
+  transition: width 250ms linear;
+}
+
+.p-container p {
+  margin-bottom: 0.3500rem;
+}
+
+.pagination-slim li:first-child::after {
+  content: "/";
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.pagination {
+  text-align: center;
+}
+
+.related-posts .related-post-date,
+.related-posts .related-post-title {
+  display: inline-block;
+}
+
+.related-posts .related-post-date::after {
+  content: " /";
+}
+
+.form-submitting {
+  opacity: 0.7;
+}
+
+fieldset {
+  padding: 0;
+  border: 0;
+}
+
+fieldset input,
+fieldset textarea {
+  display: block;
+  width: 100%;
+}
+
+fieldset .form-first-name-container {
+  padding-right: 0.1700rem;
+}
+
+fieldset .form-last-name-container {
+  padding-left: 0.1700rem;
+}
+
+fieldset .field-error::first-letter {
+  text-transform: capitalize;
+}
+
+fieldset.form-error {
+  color: rgba(204, 59, 59, 1);
+}
+
+fieldset.form-error input,
+fieldset.form-error textarea {
+  border: 1px solid rgba(204, 59, 59, 1);
+}
+
+.form-contact-notification {
+  background-color: #D1D1D1;
+}
+
+fieldset .field-error,
+.form-contact-notification.form-error {
+  background-color: rgba(204, 59, 59, 1);
+  color: #fff;
+  width: auto;
+  min-width: 0;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.contact-info dt {
+  clear: left;
+  float: left;
+  margin-right: 0.5rem;
+}
+
+.contact-info dd {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.album dl {
+  width: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.album dt {
+  float: left;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+}
+.album dd {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.header-btn,
+.btn-close {
+  text-align: center;
+}
+
+.masthead {
+  position: relative;
+}
+
+.logo {
+  height: 100px;
+  background: transparent url("../img/avatar.png") no-repeat center center;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.logo:hover {
+  -webkit-animation: jiggle 100ms steps(4) 4 alternate;
+  animation: jiggle 100ms steps(4) 4 alternate;
+}
+
+.social-links {
+  margin: 0 auto;
+  width: 80px;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.social-links li.list-group__item {
+  padding: 0 0.6500rem;
+  padding-left: 0;
+}
+
+.social-links li.list-group__item i{
+  transition: all 500ms ease;
+  transform-style: preserve-3d;
+}
+
+.social-links li.email {
+  display: none;
+}
+
+.header-email {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.social-links li.list-group__item i:hover {
+  transform: rotateY(360deg);
+}
+
+hr {
+  margin: 0 auto;
+  border: 0;
+  width: 4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+hr.hr {
+  width: 5rem;
+}
+
+.album-title,
+.page-title {
+  text-align: center;
+}
+.album-info,
+.page-info {
+  text-align: center;
+}
+
+.graphic img {
+  border: 1px solid #ccc;
+}
+.graphic figcaption {
+  text-align: center;
+}
+
+.social-share-buttons {
+  text-align: center;
+}
+
+.social-btn {
+  padding-left: 0.1875rem;
+  padding-right: 0.1875rem;
+}
+
+.main-footer {
+  text-align: center;
+}
+
+.error404 {
+  text-align: center;
+}
+
+.graphic .embed {
+  position: relative;
+}
+
+.graphic-overlay-container {
+  position: absolute;
+  top: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  right: 0rem;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: rgba(255, 255, 255, 0.7);
+
+  transform-origin: center center;
+  opacity: 0;
+  transition: all 250ms ease;
+}
+.graphic-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
+}
+
+.graphic-overlay i {
+  transition: all 500ms ease;
+  transform-style: preserve-3d;
+}
+
+.graphic-overlay-container:hover {
+  opacity: 1;
+}
+
+.graphic-overlay-container:hover .graphic-overlay i {
+  transform: rotateY(180deg);
+}
+
+.enable-slideshow {
+  text-align: center;
+}
+
+.aside-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.post .social-share-buttons {
+  text-align: left;
+}
+
+.p-container img {
+  display: block;
+  width: 100%;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+
+@media only screen and (min-width: 25em) {
+  .logo {
+    width: 100px;
+    margin: 0 auto;
+  }
+  .header-btn {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+  }
+  .btn-close {
+    cursor: pointer;
+    position: absolute;
+    top: 0.1rem;
+    right: 1.2rem;
+  }
+  .album dl {
+    width: 16rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .album dt {
+    float: left;
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+  }
+  .album dd {
+    float: left;
+    margin: 0;
+    padding: 0;
+    margin-right: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 38em) {
+}
+
+@media only screen and (min-width: 60em) {
+  .logo {
+    margin: 0;
+  }
+  .social-links {
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+    padding-top: 0;
+  }
+  .header-content {
+    padding: 0;
+  }
+  .hr-header {
+    display: none;
+  }
+
+  .social-links li.email {
+    display: inline-block;
+  }
+
+  .header-email {
+    display: none;
+  }
+
+  .main-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  .album-title,
+  .page-title {
+    text-align: left;
+  }
+
+  .album-info,
+  .page-info {
+    text-align: left;
+  }
+
+  .album .social-share-buttons,
+  .post .social-share-buttons {
+    text-align: left;
+  }
+
+  .main-footer {
+    text-align: left;
+  }
+
+  .album dl {
+    width: 20rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contact-map-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .error404 {
+    text-align: left;
+  }
+
+  .pagination {
+    text-align: left;
+  }
+
+  .enable-slideshow {
+    text-align: left;
+  }
+
+  .aside-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .aside-container .hr-container {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+}

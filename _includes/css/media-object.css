@@ -1,0 +1,27 @@
+.media {
+	overflow: hidden;
+}
+
+.media__img {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.media__img--reversed {
+	float: right;
+	margin: 0 0 0 10px;
+}
+
+.media__img--stacked {
+	float: none;
+	margin: 0 0 10px;
+}
+
+.media__body {
+	overflow: hidden;
+}
+
+[hidden], .hidden {
+  display: none;
+  visibility: hidden;
+}

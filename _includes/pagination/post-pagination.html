@@ -1,0 +1,38 @@
+{% assign items = site.posts %}
+
+{% assign prev = false %}
+{% assign next = false %}
+
+{% for item in items %}
+  {% if page.url == item.url %}
+    {% assign current = forloop.index0 %}
+    {% assign prev = forloop.index0 | minus: 1 %}
+    {% assign next = forloop.index0 | plus: 1 %}
+    {% if forloop.first %}
+      {% assign prev = false %}
+    {% endif %}
+    {% if forloop.last %}
+      {% assign next = false %}
+    {% endif %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<div class="pagination pagination-slim push-0 pad-t pad-b brand-highlight">
+  <ul class="list-group--inline  micro push-0">
+    <li class="list-group__item">
+      {% if prev %}
+        <a href="{{site.baseurl}}{{items[prev].url}}" title="Previous">&lt; prev</a>
+      {% else %}
+        <span>&lt; prev</span>
+      {% endif %}
+    </li>
+    <li class="list-group__item">
+      {% if next %}
+        <a href="{{site.baseurl}}{{items[next].url}}" title="Next">next &gt;</a>
+      {% else %}
+        <span>next &gt;</span>
+      {% endif %}
+    </li>
+  </ul>
+</div>

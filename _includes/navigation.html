@@ -1,0 +1,31 @@
+{% assign site-pages = site.pages | where:"navigationSection",include.navSection | sort:"weight"  %}
+
+<ul class="list-group brand-highlight {% if 'xs-s-m' == include.navType %}pad-t-1-4 pad-b{%else%} pad-b-2{% endif %} push-0 text-upper">
+
+  {% if "second" == include.navSection %}
+  <div class="{% if 'xs-s-m' == include.navType %}pad-t-1-2 pad-b-1-4{% endif %}">
+    <div class="{% if 'l-xl' == include.navType %}micro{% else %}micro{% endif %} pad-b-1-4">
+    work
+    </div>
+  </div>
+  {% endif %}
+
+  {% if "first" == include.navSection %}
+  <li class="list-group__item">
+    <a class="{% if 'l-xl' == include.navType %}micro{% else %}micro{% endif %}" href="#">
+    external link
+    </a>
+  </li>
+  {% endif %}
+
+  {% for item in site-pages %}
+    {% if item.url contains "page2" %}{% continue %}{% endif %}
+    {% if true == item.includeInNavigation %}
+      <li class="list-group__item {% if page.url contains item.url %}current{% endif %}">
+        <a class="{% if 'l-xl' == include.navType %}micro{% else %}micro{% endif %}" href="{{site.baseurl}}{{item.url}}">
+        {{ item.title | upcase }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -1,0 +1,61 @@
+---
+layout: simple
+title: sitemap
+titleBefore:
+titleAfter:
+meta:
+summary:
+author:
+image:
+keywords:
+sectionClass: sitemap
+navigationSection: second
+includeInNavigation: false
+weight: 0
+sitemap:
+  lastMod: 2016-05-02
+  priority: 0.7
+  changeFreq: monthly
+  include: false
+---
+
+  {% assign posts = site.posts | sort:"weight" %}
+  <h5 class="brand-highlight push-0 pad-b-1-2 pad-t-1-2">Posts</h5>
+  <ul class="list-group push-0 kilo">
+  {% for item in posts %}
+    {% if item.sitemap.include == false %}{% continue %}{% endif %}
+    {% unless item.published == false %}
+      <li class="list-group__item"><a href="{{site.baseurl}}{{item.url}}">{{item.title | capitalize}}</a></li>
+    {% endunless %}
+  {% endfor %}
+  </ul>
+
+  {% assign pages = site.pages | sort:"weight" %}
+  <h5 class="brand-highlight push-0 pad-b-1-2 pad-t-1-2">Pages</h5>
+  <ul class="list-group push-0 kilo">
+  {% for item in pages %}
+    {% if item.layout %}
+      {% if item.sitemap.include == false %}{% continue %}{% endif %}
+      {% if '/' == item.url or item.url contains "page2" %}{% continue %}{% endif %}
+      <li class="list-group__item"><a href="{{site.baseurl}}{{item.url}}">{{item.title | capitalize}}</a></li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+
+  {% assign albums = site.albums | sort:"order" %}
+  <h5 class="brand-highlight push-0 pad-b-1-2 pad-t-1-2">Albums</h5>
+  <ul class="list-group push-0 kilo">
+  {% for item in albums %}
+    {% if item.sitemap.include == false %}{% continue %}{% endif %}
+      <li class="list-group__item"><a href="{{site.baseurl}}{{item.url}}">{{item.title | capitalize}}</a></li>
+  {% endfor %}
+  </ul>
+
+  {% assign image = site.images | sort:"order" %}
+  <h5 class="brand-highlight push-0 pad-b-1-2 pad-t-1-2">Images</h5>
+  <ul class="list-group push-0 kilo">
+  {% for item in image %}
+    {% if item.sitemap.include == false %}{% continue %}{% endif %}
+      <li class="list-group__item"><a href="{{site.baseurl}}{{item.url}}">{{item.title | capitalize}}</a></li>
+  {% endfor %}
+  </ul>
