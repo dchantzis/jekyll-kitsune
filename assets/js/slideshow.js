@@ -21,8 +21,13 @@ $(window).load(function(){
     });
 
     $('.btn-close-slideshow').on('click', function(){
-      $('.slideshow-container').removeClass('js-slideshow-container-fade');
+      closeSlideshow();
     });
+
+    var closeSlideshow = function() {
+      $(".slideshow-images li").removeClass('js-slideshow-image-selected');
+      $('.slideshow-container').removeClass('js-slideshow-container-fade');
+    }
 
     var openNextImage = function() {
       var $currentElement = $('.js-slideshow-image-selected');
@@ -71,11 +76,15 @@ $(window).load(function(){
 
     $('html').on('keydown', function(e){
       if($('.slideshow-container').hasClass('js-slideshow-container-fade')) {
-        e.preventDefault();
         if('39' == e.keyCode || '38' == e.keyCode) {
+          e.preventDefault();
           openNextImage();
         } else if('37' == e.keyCode || '40' == e.keyCode) {
+          e.preventDefault();
           openPreviousImage();
+        } else if('13' == e.keyCode || '27' == e.keyCode) {
+          e.preventDefault();
+          closeSlideshow();
         }
       }
     });

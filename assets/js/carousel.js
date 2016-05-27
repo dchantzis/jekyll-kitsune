@@ -2,6 +2,8 @@ $(window).load(function(){
 
   if ( $('.carousel').html() != undefined) {
 
+    $('.carousel').addClass('js-carousel-active');
+
     var slideNextItem = function(){
       var $currentElement = $('.js-carousel-item-active');
       var $nextElement = $('.js-carousel-item-active').next();
@@ -48,11 +50,22 @@ $(window).load(function(){
     });
 
     $('.carousel').on("swiperight",function(){
-      openNextImage();
+      slideNextItem();
     });
 
     $('.carousel').on("swipeleft",function(){
-      openNextImage();
+      slidePreviousItem();
+    });
+
+    $('html').on('keydown', function(e){
+      if($('.carousel').hasClass('js-carousel-active')) {
+        e.preventDefault();
+        if('39' == e.keyCode || '38' == e.keyCode) {
+          slideNextItem();
+        } else if('37' == e.keyCode || '40' == e.keyCode) {
+          slidePreviousItem();
+        }
+      }
     });
 
     setInterval(function(){

@@ -51,6 +51,7 @@ layout: default
       {% when 'l-1-4' %}
         {% assign mod = 4 %}
     {% endcase %}
+    {% assign mod_checker = mod | minus: 1 %}
 
     {% for image in album_images | sort:"order" %}
 
@@ -64,7 +65,7 @@ layout: default
           {% include image.html loadType = 'album-view' %}
           </a>
         </div>
-      {% if forloop.last or mod == loopindex %}
+      {% if forloop.last or mod_checker == loopindex %}
         </div>
       {% endif %}
 
