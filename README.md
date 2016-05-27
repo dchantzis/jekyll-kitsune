@@ -23,8 +23,8 @@ This theme includes the following:
 - Google fonts (Roboto and Abel)
 - Syntax highlighting
 - Pure CSS toggleable navigation and information top-bar
-- Lightbox presentation for image albums with transitions, controls and navigation buttons
-- CSS3 & jQuery responsive image carousel with transitions, controls and navigation buttons
+- Lightbox presentation for image albums with transitions, controls, navigation buttons and keyboard shortcuts
+- CSS3 & jQuery responsive image carousel with transitions, controls, navigation buttons and keyboard shortcuts
 - Option to select the image grid type of an album
 - Social media share buttons for posts, albums and images
 - Disqus comments
