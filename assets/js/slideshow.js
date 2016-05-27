@@ -94,7 +94,7 @@ $(window).load(function(){
     });
 
     $('html').on("swipeleft",function(){
-      openNextImage();
+      openPreviousImage();
     });
 
   }
