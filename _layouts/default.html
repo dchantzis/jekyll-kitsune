@@ -2,7 +2,7 @@
 <html lang="en-gb">
 <head>
   <meta charset="utf-8">
-  <title>{% if page.titleBefore %}{{page.titleBefore}} · {% endif %}{% if page.title %}{{page.title | capitalize }} · {% endif %}{{site.title}}{% if page.titleAfter %} · {{page.titleAfter}}{% endif %}</title>
+  <title>{% if nil != page.titleBefore %}{{page.titleBefore}} · {% endif %}{% if nil != page.title %} {{page.title}} · {% endif %}{{site.title}}{% if nil !=  page.titleAfter %} · {{page.titleAfter}} {% endif %}</title>
 
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
