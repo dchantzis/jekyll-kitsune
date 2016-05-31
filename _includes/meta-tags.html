@@ -4,7 +4,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="{% if nil != page.titleBefore %}{{page.titleBefore}} · {% endif %}{% if nil != page.title %} {{page.title}} · {% endif %}{{site.title}}{% if nil !=  page.titleAfter %} · {{page.titleAfter}} {% endif %}">
-<meta property="og:image" content="{{site.baseurl}}{{ page.image }}">
+<meta property="og:image" content="{{site.url}}/assets/img/logo-fb.png">
 <meta property="og:description" content="{% if page.meta %}{{ page.meta }}{% else %}{{ site.description }}{% endif %}">
 <meta property="og:url" content="{{site.url}}{{page.url}}">
 <meta property="og:site_name" content="{{site.title}}">
@@ -13,7 +13,7 @@
 <meta name="twitter:title" content="{% if nil != page.titleBefore %}{{page.titleBefore}} · {% endif %}{% if nil != page.title %} {{page.title}} · {% endif %}{{site.title}}{% if nil !=  page.titleAfter %} · {{page.titleAfter}} {% endif %}">
 <meta name="twitter:url" content="{{site.url}}{{page.url}}">
 <meta name="twitter:description" content="{% if page.meta %}{{page.meta}}{% else %}{{site.description}}{% endif %}">
-<meta name="twitter:image" content="{{site.baseurl}}/assets/img/logo-120.png">
+<meta name="twitter:image" content="{{site.url}}/assets/img/logo-tw.png">
 
 {% for social in site.social %}
   {% assign social.provider == social.provider | downcase %}
