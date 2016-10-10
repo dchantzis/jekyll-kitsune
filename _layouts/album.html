@@ -45,11 +45,20 @@ layout: default
     {% assign mod = 1 %}
     {% case page.gridType %}
       {% when 'l-4-5' %}
+        {% assign grid-type = 'm-1-2 l-4-5' %}
         {% assign mod = 1 %}
       {% when 'l-1-2' %}
         {% assign mod = 2 %}
+        {% assign grid-type = 'm-1-2 l-1-2' %}
+      {% when 'l-1' %}
+        {% assign mod = 1 %}
+        {% assign grid-type = 'l-1' %}
+      {% when 'l-1-3' %}
+        {% assign mod = 3 %}
+        {% assign grid-type = 'm-1 l-1-3' %}
       {% when 'l-1-4' %}
         {% assign mod = 4 %}
+        {% assign grid-type = 'm-1-2 l-1-4' %}
     {% endcase %}
     {% assign mod_checker = mod | minus: 1 %}
 
@@ -60,7 +69,7 @@ layout: default
       {% if forloop.first or 0 == loopindex %}
         <div class="grid">
       {% endif %}
-        <div class="unit [ xs-1 s-1 m-1-2 {{page.gridType}} ] image island-1-4">
+        <div class="unit [ xs-1 s-1 {{grid-type}} ] image island-1-4">
           <a href="{{site.baseurl}}{{image.url}}">
           {% include image.html loadType = 'album-view' %}
           </a>

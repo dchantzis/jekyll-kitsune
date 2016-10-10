@@ -135,4 +135,21 @@ function initMap() {
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
 
+  google.maps.event.addListener(map, 'click', function(event)
+  {
+    addMarker(event.latLng, map);
+  });
+
+  addMarker({ lat: mapLat, lng: mapLng }, map);
+
+  function addMarker (location, map)
+  {
+    marker = new google.maps.Marker({
+      map: map,
+      draggable: false,
+      position: location
+    });
+  }
+
+
 }
