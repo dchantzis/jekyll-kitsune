@@ -299,6 +299,10 @@ tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
+#map > div:first-child {
+  position:  static !important;
+}
+
 @media only screen and (min-width: 25em) {
   .logo {
     width: 100px;
